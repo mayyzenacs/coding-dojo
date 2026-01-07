@@ -1,0 +1,15 @@
+C:\Users\May\Documents\GitHub\_trash\csharp\desafios\obj\Debug\net10.0\desafios.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\May\Documents\GitHub\_trash\csharp\desafios\obj\Debug\net10.0\desafios.AssemblyInfoInputs.cache
+C:\Users\May\Documents\GitHub\_trash\csharp\desafios\obj\Debug\net10.0\desafios.AssemblyInfo.cs
+C:\Users\May\Documents\GitHub\_trash\csharp\desafios\obj\Debug\net10.0\desafios.csproj.CoreCompileInputs.cache
+C:\Users\May\Documents\GitHub\_trash\csharp\desafios\obj\Debug\net10.0\desafios.sourcelink.json
+C:\Users\May\Documents\GitHub\_trash\csharp\desafios\bin\Debug\net10.0\desafios.exe
+C:\Users\May\Documents\GitHub\_trash\csharp\desafios\bin\Debug\net10.0\desafios.deps.json
+C:\Users\May\Documents\GitHub\_trash\csharp\desafios\bin\Debug\net10.0\desafios.runtimeconfig.json
+C:\Users\May\Documents\GitHub\_trash\csharp\desafios\bin\Debug\net10.0\desafios.dll
+C:\Users\May\Documents\GitHub\_trash\csharp\desafios\bin\Debug\net10.0\desafios.pdb
+C:\Users\May\Documents\GitHub\_trash\csharp\desafios\obj\Debug\net10.0\desafios.dll
+C:\Users\May\Documents\GitHub\_trash\csharp\desafios\obj\Debug\net10.0\refint\desafios.dll
+C:\Users\May\Documents\GitHub\_trash\csharp\desafios\obj\Debug\net10.0\desafios.pdb
+C:\Users\May\Documents\GitHub\_trash\csharp\desafios\obj\Debug\net10.0\desafios.genruntimeconfig.cache
+C:\Users\May\Documents\GitHub\_trash\csharp\desafios\obj\Debug\net10.0\ref\desafios.dll
