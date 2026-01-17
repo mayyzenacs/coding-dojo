@@ -1,19 +1,14 @@
-﻿using System;
-using System.Security.Cryptography;
+﻿using exercises; 
 
-namespace csharp
+namespace CursoBackend;
+
+public class Program
 {
-    class Program
-{
-    static void Main()
+    // O args chega preenchido pelo SO.
+    public static void Main(string[] args) 
     {
-        string age = "2"; 
-        int idade;
+        Usuario user = new Usuario("lucas", "231932");
 
-        int.TryParse(age, out idade);
-        
-        }
+        user.ApresentarStrin();
     }
 }
-
-
