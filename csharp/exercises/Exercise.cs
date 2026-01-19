@@ -1,28 +1,14 @@
 namespace exercises; 
 
-public class Usuario
+public class Usuario  
 {
-    public string Nome;
-    public string Telefone;
-
-    public Usuario(string nome, string telefone)
+    
+   
+    public static double Multiplicar(double Nota1, double Nota2)
     {
-        Nome = nome;
-        Telefone = telefone;
+        return Nota1 / Nota2;
     }
-
-    public string Apresentar()
-    {
-        if (!string.IsNullOrWhiteSpace(Nome))
-        {
-            return string.Format($"Olá {Nome} telefone {Telefone}");
-            
-        }
-        return string.Format("nome vazio");
-    }
-
-    public void ApresentarStrin()
-    {
-        Console.WriteLine(Apresentar());
-    }
+    
+    
+    
 }

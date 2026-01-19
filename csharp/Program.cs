@@ -5,10 +5,10 @@ namespace CursoBackend;
 public class Program
 {
     // O args chega preenchido pelo SO.
-    public static void Main(string[] args) 
+    public static void Main() 
     {
-        Usuario user = new Usuario("lucas", "231932");
-
-        user.ApresentarStrin();
+        var user = Usuario.Multiplicar(2,10);
+        
+        Console.WriteLine(user);
     }
 }
