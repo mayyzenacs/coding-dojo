@@ -7,41 +7,100 @@ namespace csharp;
 
 public class Program
 {
-    // O args chega preenchido pelo SO.
     public static void Main() 
     {
-        var p1 = new Produto(1, "hamburguer de queijo", 29.9m);
-        var p2 = new Produto(2, "Batata", 29.9m);
-        var p3 = new Produto(3, "salada", 29.9m);
-        var p4 = new Produto(4, "Hamrbuguer sem qeuijo", 29.9m);
-        var p5 = new Produto(5, "Refrigante laranja", 29.9m);
         
         var r = new Restaurante();
+        r.CadastrarProduto(new Produto { Id = 1, Nome = "Hamburguer", Valor = 29.9m });
+        r.CadastrarProduto(new Produto { Id = 2, Nome = "Batata frita", Valor = 14m });
+        r.CadastrarProduto(new Produto { Id = 3, Nome = "refrigerante", Valor = 14.9m });
+        r.CadastrarProduto(new Produto { Id = 4, Nome = "Nuggets", Valor = 6m });
+        r.CadastrarProduto(new Produto { Id = 5, Nome = "Batataa cheddar and baconw", Valor = 18.5m  });
+        r.CadastrarProduto(new Produto { Id = 6, Nome = "Hotdog", Valor = 20.5m  });
+        
+        Console.WriteLine("----- bem vindo a mayyzena hotdog e tals!!!! -----");
+        Console.WriteLine("Faça seu cadastro: ");
+        Console.WriteLine("---------------");
 
-        Console.WriteLine("bem vindo a mayyzena hotdog e tals");
-        Console.WriteLine("Escolha um numero do menu faz favor");
-        Console.WriteLine("MENU \n 1 - Fazer novo pedido \n 2- Ver pedidos anteriores \n 3 -Sair");
-        int option = int.Parse(Console.ReadLine());
+        Console.WriteLine("Digite seu nome: "); 
+        string nome = Console.ReadLine();
+        Console.WriteLine("Digite seu telefone: "); 
+        string telefone = Console.ReadLine();
+        
+        var user = new Usuario(nome, telefone);
+        
 
-        switch (option)
+        
+        int choice;
+        int option;
+
+        do
         {
-            case 1:
-            r.ListarProdutosDisponiveis();  
-            
-            int choice;
-            do
-                {
-                    Console.WriteLine("Adicione produtos pelo id, aperte 0 para sair");
-                    choice = int.Parse(Console.ReadLine());
-                }
-            while (choice > 0);
+            Console.Clear();
+            Console.WriteLine($"Olá {nome} Seja bem vindo faça um pedido");
+            Console.WriteLine("Escolha um numero do menu");
+            Console.WriteLine("MENU \n 1 - Fazer novo pedido \n 2- Ver pedidos anteriores \n 3 -Sair");
+            option = int.Parse(Console.ReadLine());
 
-            break;
-            case 2:
-            // resolver porque cadastrar produtos nao ta funcionando pra cadastrar
-            break;
-            case 3:
-            break;
-        }
+
+            switch (option)
+            {
+                case 1:
+                var p = new Pedido();
+                int sair;
+
+                do {  
+                    Console.Clear();
+                    r.ListarProdutosDisponiveis();   
+
+                    Console.WriteLine("-----------");
+                    Console.WriteLine("Adicione produtos pelo id");
+                    choice = int.Parse(Console.ReadLine());
+
+                    Produto produtoEscolhido = r.BuscarProdutoPorId(choice);
+                    if (produtoEscolhido == null)
+                        {
+                            Console.Write("Produto não encontrado");
+                        } else
+                        {
+                            p.AdicionarProdutos(produtoEscolhido);
+                        }
+                    
+
+                    Console.Write("0 - Finalizar ou \n 1 - pedir mais itens "); 
+                    sair = int.Parse(Console.ReadLine());
+
+                } while (sair != 0);
+
+                if (p.produtosPedidos.Count > 0)
+                    {
+                        user.FazerPedido(p); 
+                        p.FinalizarPedido();
+                    } else
+                    {
+                        Console.Write("pedido zerado descartado");
+                    }
+
+                Console.WriteLine("\n[Pressione ENTER para voltar no menu]");
+                Console.ReadKey();
+                   
+                break;
+
+                case 2:
+                user.VerPedidosAnteriores();
+                Console.WriteLine("\n[Pressione ENTER para voltar no menu]");
+                Console.ReadKey();
+                
+                break;
+                case 3:
+                Console.Write("AGRADECEMOS POR UTILIZAR NOSSOS SERVICOS");
+                break;
+            }
+        } while (option != 3);
+        
+
+        
+   
     }
+
 }
