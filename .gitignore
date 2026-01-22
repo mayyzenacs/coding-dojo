@@ -11,6 +11,7 @@ bin/
 obj/
 *.csproj.user
 *.sln.DotSettings.user
+*.sln
 
 # JavaScript & TypeScript
 node_modules/
