@@ -1,116 +1,24 @@
-namespace exercises; 
+namespace csharp.exercises; 
 
-public class Produto
+public class CalculadoraEstatica
 {
-    public int Id;
-    public string Nome;
-    public decimal Valor;
-
-}
-
-public class Pedido
-{
-    public int Id;
-    DateTime Hora = DateTime.Now;
-    public string Usuario;
-    public List<Produto> produtosPedidos = new List<Produto>();
-
-    public void AdicionarProdutos(Produto produto)
+    public static int Somar(int a, int b)
     {
-        produtosPedidos.Add(produto);
-        Console.WriteLine($"adicionado ao pedido: {produto.Nome}");
+        return a +b;
     }
 
-    public string CalcularTotal()
+    public static int Multiplicar(int a, int b)
     {
-        return string.Format($"{produtosPedidos.Sum(produtosPedidos => produtosPedidos.Valor)}");
-    }
-
-    public void FinalizarPedido()
-    {
-        Console.WriteLine($"finalizando pedido para {Usuario}");
-        Console.WriteLine("-----------");
-        foreach (var p in produtosPedidos)
-        {
-            Console.WriteLine($"---- Produto {p.Nome} Valor {p.Valor} ----");
-        }
-        Console.WriteLine($"Total do pedido: {CalcularTotal()}");
-        Console.WriteLine("-----------");
-        Console.WriteLine($"Horario do pedido {Hora} seu pedido estára pronto em BREVE VOLTE SEMPRE :)");
+        return a * b;
     }
 }
 
-public class Usuario  
+public class Executar
 {
-    public string Nome;
-    string Telefone;
-    private List<Pedido> pedidosRealizados = new List<Pedido>();
-
-    public Usuario(string nome, string telefone)
+    public static void Execution()
     {
-        Nome = nome;
-        Telefone = telefone;
-    }
+        var r = CalculadoraEstatica.Multiplicar(2, 5);
 
-    public void FazerPedido(Pedido pedido)
-    {
-        var rnd = new Random(); 
-        pedido.Id = rnd.Next();
-
-        pedido.Usuario = this.Nome;
-        pedidosRealizados.Add(pedido);
-        
-    }
-
-    public void VerPedidosAnteriores()
-    {
-        foreach (var pedido in pedidosRealizados)
-        {
-            foreach (var produto in pedido.produtosPedidos)
-            {
-                Console.WriteLine($"Pedido: {produto.Nome} Valor: {produto.Valor}");
-            }
-            Console.WriteLine($"Total do pedido: {pedido.CalcularTotal()}");
-        }
-    }
-}
-
-public class Restaurante
-{
-    public List<Pedido> listaPedidos = new List<Pedido>();
-    List<Produto> produtos = new List<Produto>();
-
-    public void CadastrarProduto(Produto produto)
-    {
-        foreach (var p in produtos)
-        {
-            if (p.Id == produto.Id)
-            {
-                Console.WriteLine($"Erro ja existe um produto com esse ID:  {produto.Id}");
-                return; 
-            }
-        }
-        produtos.Add(produto);
-    }
-
-    public Produto BuscarProdutoPorId(int id)
-    {
-        foreach (var p in produtos)
-        {
-            if (p.Id == id)
-            {
-                return p; 
-            }   
-        } 
-      
-        return null;
-    }
-
-    public void ListarProdutosDisponiveis()
-    {
-        foreach(var p in produtos)
-        {
-            Console.WriteLine($"id: {p.Id} nome: {p.Nome} Valor: {p.Valor}");
-        }
+        Console.WriteLine(CalculadoraEstatica.Somar(2,5));
     }
 }
