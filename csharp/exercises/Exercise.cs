@@ -1,24 +1,14 @@
 namespace csharp.exercises; 
 
-public class CalculadoraEstatica
+public class ParametrosNomeados
 {
-    public static int Somar(int a, int b)
-    {
-        return a +b;
+    public static void Formatar(int dia, int mes, int ano)  {
+        Console.WriteLine($"{dia:D2} {mes:D2} {ano:D2}");
     }
 
-    public static int Multiplicar(int a, int b)
+    public static void Execute()
     {
-        return a * b;
+        Formatar(dia: 1, mes: 5, ano:2026);
     }
 }
 
-public class Executar
-{
-    public static void Execution()
-    {
-        var r = CalculadoraEstatica.Multiplicar(2, 5);
-
-        Console.WriteLine(CalculadoraEstatica.Somar(2,5));
-    }
-}
