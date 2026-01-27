@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Moedas | Dev Study</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+        <header>
+            <h1>Conversor de Câmbio</h1>
+            <p>Dólar Americano para Real Brasileiro</p>
+        </header>
+
+        <section class="converter-box">
+            <div class="input-group">
+                <label for="usd-value">Valor em Dólar (USD)</label>
+                <div class="input-wrapper">
+                    <span class="currency-symbol">$</span>
+                    <input type="number" id="usd-value" placeholder="0,00">
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="exchange-rate">Cotação Atual (BRL)</label>
+                <input type="number" id="exchange-rate" placeholder="Ex: 5.50">
+            </div>
+
+            <button id="convert-btn">Converter para Real</button>
+
+            <hr>
+
+            <div class="result-area">
+                <span class="label-result">Resultado:</span>
+                <div id="result-value">R$ 0,00</div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Projeto de estudo para prática de manipulação de DOM.</p>
+        </footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
