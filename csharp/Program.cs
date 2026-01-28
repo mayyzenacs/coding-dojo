@@ -1,11 +1,13 @@
 ﻿using csharp.exercises;
 
 namespace csharp; 
-class Program
-{
+
+public class Program { 
+
     public static void Main()
     {
-        ParametrosNomeados.Execute();
-    
+        Filme.Titulo = "O inominavel";
+        Exe.Execute();
     }
+
 }

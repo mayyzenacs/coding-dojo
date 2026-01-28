@@ -1,14 +1,14 @@
+
 namespace csharp.exercises; 
 
-public class ParametrosNomeados
+public struct Pessoa
 {
-    public static void Formatar(int dia, int mes, int ano)  {
-        Console.WriteLine($"{dia:D2} {mes:D2} {ano:D2}");
-    }
+    public int Idade { get; set; }
+    public string Nome { get; set; }
+    public string Cpf { get; set; }
+    public string Email { get; set; }
 
-    public static void Execute()
-    {
-        Formatar(dia: 1, mes: 5, ano:2026);
-    }
 }
+
+
 
