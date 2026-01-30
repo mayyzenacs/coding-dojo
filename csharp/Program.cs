@@ -1,34 +1,26 @@
-﻿public class Validador
-{
-    
-    public bool TentarConverter(string texto, out int resultado)
-    {
-        if (int.TryParse(texto, out int numeroConvertido))
-        {
-            resultado = numeroConvertido; // 
-            return true;
-        }
-
-        resultado = 0; 
-        return false;
-    }
-}
-
+﻿
 public class Program
 {
     public static void Main()
     {
-        Validador val = new Validador();
-        string input = "123";
-
+        void ExibirMensagem()
+            {
+            int chave = 1;
+            string valor = "mayra";
+            Dictionary<int, string> codigos = new() { [chave] = valor};
+            foreach(var c in codigos)
+            {
+                Console.WriteLine(c.Value, c.Key);
+            }
+            List<int> myList = [4, 3, 24, 12];
+            for (int i = 0; i < myList.Count; i++)
+            {
+                Console.WriteLine(myList[i]);
+            }
+            
+            }
         
-        if (val.TentarConverter(input, out int numero))
-        {
-            Console.WriteLine($"Sucesso: {numero}");
-        }
-        else
-        {
-            Console.WriteLine("Não é um número.");
-        }
+
+        ExibirMensagem();
     }
 }
