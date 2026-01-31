@@ -1,4 +1,6 @@
 ﻿
+using System.Collections;
+
 public class Program
 {
     public static void Main()
@@ -17,7 +19,20 @@ public class Program
             {
                 Console.WriteLine(myList[i]);
             }
+            //hashset
+            HashSet<string> nomes = ["may", "ana", "mayra"];
+
+            //queue com generics
+            var quiu = new Queue<string>(); 
+            quiu.Enqueue("a"); // adicionar mas o primeiro a sair é o primeiro a entrar lembre-se FIFO
+            quiu.Enqueue("b");
+            quiu.Enqueue("c");
+            Console.WriteLine(quiu.Peek()); //pegar elemento do inicio
+            quiu.Dequeue(); // remover elementos do inicio
             
+            // queue sem generics, pode adidiconar qualquer coisa
+            var quiueSemGeneric = new Queue();
+             
             }
         
 
