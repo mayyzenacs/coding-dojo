@@ -7,7 +7,7 @@ public class Carro(string nome, int velocidade, string modelo)
     protected int Velocidade = velocidade;
     public string Modelo = modelo;
 
-    public int Acelerar(int kmh)
+    public virtual int Acelerar(int kmh)
     {
         if (kmh == 0) kmh = 0;
 
@@ -22,6 +22,11 @@ public class CarroFeio(string nome, int velocidade, string modelo, int rodas) : 
     public string Desc()
     {
         return $"carro feio {Nome} anda {Velocidade} e tem {rodas}"; 
+    }
+
+    public override int Acelerar(int kmh)
+    {
+        return base.Acelerar(kmh);
     }
 }
 
