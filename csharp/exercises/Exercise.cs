@@ -13,12 +13,9 @@ public class Videoagame
 
         // com parametro, da esquerda o que a fun recebe e da direita
         //  que a fun retorna
-        Func<int, bool> Ligado = numero =>
-        {
-          return true;
-        };
+        Func<int, string> ConverteHex = numero => numero.ToString("X");
 
-        Ligado(1);
+        ConverteHex(1);
     }
 }
 
