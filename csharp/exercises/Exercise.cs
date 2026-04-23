@@ -3,19 +3,17 @@ namespace csharp.exercises;
 
 public class Videoagame
 {
-    public static void Ligar()
+    public void Ligar(bool onoff)
     {
-        Func<int> Power = () =>
+
+        try
         {
-            Random random = new Random();
-            return random.Next(0, 1);
+            if (!onoff) throw new ArgumentException("insuficiente");;
+            
+        }
+        catch (Exception ex){
+            Console.WriteLine($"ERRO {ex}");
         };
-
-        // com parametro, da esquerda o que a fun recebe e da direita
-        //  que a fun retorna
-        Func<int, string> ConverteHex = numero => numero.ToString("X");
-
-        ConverteHex(1);
     }
 }
 

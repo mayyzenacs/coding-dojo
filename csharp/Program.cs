@@ -9,6 +9,14 @@ public class Program
     public static void Main()
     {
             
+        var t = new Videoagame();
+        
+        t.Ligar(false);
+        
+
+
+
+
 
         
     }
