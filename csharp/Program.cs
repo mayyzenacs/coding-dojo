@@ -6,18 +6,9 @@ namespace csharp;
 
 public class Program
 {
-    public static void Main()
+    public static async Task Main()
     {
-            
-        var t = new Videoagame();
-        
-        t.Ligar(false);
-        
-
-
-
-
-
-        
+        var desafio = new Desafio();
+        await desafio.ExecuteFirst();     
     }
 }
