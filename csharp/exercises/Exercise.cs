@@ -1,9 +1,7 @@
 
-namespace csharp.exercises; 
-using System.Text;
-using System.Text.Json;
 using System.Net.Http.Json;
-using System.ComponentModel.DataAnnotations;
+
+namespace csharp.exercises; 
 
 public class Desafio
 {   
